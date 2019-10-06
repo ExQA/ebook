@@ -28,8 +28,13 @@ def calculator(request):
             operation = request.POST.get('operation')
             second_num = float(request.POST.get('second_num'))
             result = calc_object[operation](first_num, second_num)
-            ctx['msg'] = result
+            ctx['result'] = result
         except(ValueError, ZeroDivisionError, ) as e:
             ctx['msg'] = e
 
     return render(request, 'calculator.html', ctx)
+
+def about(request):
+    ctx = {}
+    return render(request, "about.html", ctx )
+pass

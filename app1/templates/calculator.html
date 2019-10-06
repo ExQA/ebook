@@ -10,8 +10,8 @@
 
     First number <input name="first_num" type="text">
     <select name="operation" id="">
-        {% for oper in  operations %}
-        <option value=" {{ oper }} "> {{ oper }} </option>
+        {% for operation in  operations %}
+        <option value="{{ operation }}">{{ operation }}</option>
         {% endfor %}
 
     </select>
