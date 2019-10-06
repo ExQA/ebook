@@ -13,3 +13,6 @@ class Book(models.Model):
         return '{} {} $'.format(self.title, self.price, self.description)
 
 
+
+
+

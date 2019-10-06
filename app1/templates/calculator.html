@@ -5,6 +5,24 @@
     <title>Calculator</title>
 </head>
 <body>
+<form action="/calculator/" method="post">{% csrf_token %}
+<h1>Calculator page</h1>
+
+    First number <input name="first_num" type="text">
+    <select name="operation" id="">
+        {% for oper in  operations %}
+        <option value=" {{ oper }} "> {{ oper }} </option>
+        {% endfor %}
+
+    </select>
+    Second number <input name="second_num" type="text">
+
+    <button>submit</button>
+</form>
+
+<p style="color : red"> {{ msg }} </p>
+<p style="color : green"> {{ result }} </p>
+
 
 </body>
 </html>
