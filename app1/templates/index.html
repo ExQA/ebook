@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<image>
+<h1>Hello!! </h1>
+
+<h2> All books </h2>
+ <a href="calculator.html"> Calc </a>
+<image src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/export-map-share.png" </image>
+
+{{ all_books }}
+
+{% for book in all_books %}
+
+    <h3>
+        <a href="about.html"></a>
+
+    </h3>
+    <div>
+        <p>Title - {{ book.title }}</p>
+        <p>Price - {{ book.price }}</p>
+        <p>Description - {{ book.description }}</p>
+
+
+    </div>
+{% endfor %}
+
+</body>
+</html>
